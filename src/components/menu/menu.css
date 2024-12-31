@@ -1,0 +1,23 @@
+.menu-section{
+    padding: 50px 20px;
+    text-align: center;
+}
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-item img{
+    width:200px;
+    height:200px;
+    border-radius: 16px;
+}
+.menu-item h3{
+    margin :15px 0 10px;
+}
