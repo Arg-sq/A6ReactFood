@@ -10,10 +10,8 @@ function App() {
   // const changeKhaja = () => {
   //   setKhaneKura("sandwich");
   // };
-  const [jaggas, setJaggas] = useState([
-    { id: 1, name: "ktm" },
-    { id: 1, name: "Pkr" },
-  ]);
+  const [post, setPost] = useState([]);
+
   // console.log(jaggas, "jaggas");
   // useEffect(() => {
   //   console.log("component mount");
@@ -23,14 +21,7 @@ function App() {
   // }, [jaggas]);
   return (
     <div>
-      <button
-        onClick={() => {
-          setJaggas((prev) => [...prev, { id: +new Date(), name: "hjhj" }]);
-        }}
-      >
-        add khaja
-      </button>
-      <Header />
+      <Header postProps={post} setPostProp={setPost} />
       <Navbar />
       <Menu />
       <ChefSpecial />

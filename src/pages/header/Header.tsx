@@ -2,27 +2,17 @@ import { useEffect, useState } from "react";
 import "./header.css";
 import axios, { AxiosError } from "axios";
 import { BASE_URL } from "../../config";
+// import { BASE_URL } from "../../config";
 
-const Header = () => {
-  const [post, setPost] = useState([]);
+const Header = ({ postProps, setPostProp }) => {
+  // const [post, setPost] = useState([]);
 
+  // useEffect(()=>{},[])
   useEffect(() => {
-    // const getPost = async () => {
-    //   const response = await axios.get(`${BASE_URL}/post`);
-    //   setPost(response.data);
-    // };
-    // try {
-    //   getPost();
-    // } catch (e) {
-    //   if (e instanceof AxiosError) {
-    //     console.log(e.message, "dfghjkhgf");
-    //   }
-    //   console.log("error ayo");
-    // }
     const getPost = async () => {
       try {
         const response = await axios.get(`${BASE_URL}/posts`);
-        setPost(response.data);
+        setPostProp(response.data);
       } catch (e) {
         if (e instanceof AxiosError) {
           console.log(e);
@@ -31,7 +21,7 @@ const Header = () => {
     };
     getPost();
   }, []);
-  console.log(post, "post");
+  console.log(postProps, "post");
   return (
     <header>
       <div>
