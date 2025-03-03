@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ChefSpecial from "./pages/chefSpecial/ChefSpecial";
 import Header from "./pages/header/Header";
 import Menu from "./pages/menu/Menu";
@@ -10,6 +10,7 @@ function App() {
   // const changeKhaja = () => {
   //   setKhaneKura("sandwich");
   // };
+
   const [post, setPost] = useState([]);
 
   // console.log(jaggas, "jaggas");

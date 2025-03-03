@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./header.css";
 import axios, { AxiosError } from "axios";
 import { BASE_URL } from "../../config";
-// import { BASE_URL } from "../../config";
 
 const Header = ({ postProps, setPostProp }) => {
-  // const [post, setPost] = useState([]);
-
-  // useEffect(()=>{},[])
   useEffect(() => {
     const getPost = async () => {
       try {
@@ -21,7 +17,7 @@ const Header = ({ postProps, setPostProp }) => {
     };
     getPost();
   }, []);
-  console.log(postProps, "post");
+
   return (
     <header>
       <div>
