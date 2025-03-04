@@ -5,25 +5,15 @@ import Menu from "./pages/menu/Menu";
 import Navbar from "./pages/navbar/Navbar";
 
 function App() {
-  // const [khaneKura, setKhaneKura] = useState("samosa");
-  // console.log(khaneKura, "<-------");
-  // const changeKhaja = () => {
-  //   setKhaneKura("sandwich");
-  // };
-
+  // let post=[]
   const [post, setPost] = useState([]);
 
-  // console.log(jaggas, "jaggas");
-  // useEffect(() => {
-  //   console.log("component mount");
-  //   return () => {
-  //     console.log("component unmiunt");
-  //   };
-  // }, [jaggas]);
+  const [user, setUser] = useState([]);
+  console.log(post, "post");
   return (
     <div>
-      <Header postProps={post} setPostProp={setPost} />
-      <Navbar />
+      <Header postProps={post} setterFunc={setPost} />
+      <Navbar userProps={user} setterFunc={setUser} />
       <Menu />
       <ChefSpecial />
     </div>

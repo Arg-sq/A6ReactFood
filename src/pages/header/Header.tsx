@@ -3,12 +3,12 @@ import "./header.css";
 import axios, { AxiosError } from "axios";
 import { BASE_URL } from "../../config";
 
-const Header = ({ postProps, setPostProp }) => {
+const Header = ({ postProps, setterFunc }) => {
   useEffect(() => {
     const getPost = async () => {
       try {
         const response = await axios.get(`${BASE_URL}/posts`);
-        setPostProp(response.data);
+        setterFunc(response.data);
       } catch (e) {
         if (e instanceof AxiosError) {
           console.log(e);
