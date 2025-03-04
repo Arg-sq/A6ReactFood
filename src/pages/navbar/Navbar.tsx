@@ -9,7 +9,7 @@ const Navbar = ({ userProps, setterFunc }) => {
       try {
         const response = await axios.get(`${BASE_URL}/users`);
         console.log(response, "res");
-        // setterFunc(response.data)
+        setterFunc(response.data);
       } catch (e) {
         console.log(e);
       }

@@ -21,3 +21,9 @@ function App() {
 }
 
 export default App;
+
+// App- Header- profile -logout
+// contextAPI,
+// redux, zustand
+
+globalstore;
