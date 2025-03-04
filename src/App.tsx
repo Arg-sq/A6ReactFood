@@ -1,29 +1,17 @@
-import { useState } from "react";
-import ChefSpecial from "./pages/chefSpecial/ChefSpecial";
-import Header from "./pages/header/Header";
+import LandinPage from "./pages/LandinPage";
 import Menu from "./pages/menu/Menu";
-import Navbar from "./pages/navbar/Navbar";
+
+import { useRoutes } from "react-router-dom";
 
 function App() {
-  // let post=[]
-  const [post, setPost] = useState([]);
+  const openRoute = [
+    { path: "/", element: <LandinPage /> },
+    { path: "/login", element: <Menu /> },
+  ];
 
-  const [user, setUser] = useState([]);
-  console.log(post, "post");
-  return (
-    <div>
-      <Header postProps={post} setterFunc={setPost} />
-      <Navbar userProps={user} setterFunc={setUser} />
-      <Menu />
-      <ChefSpecial />
-    </div>
-  );
+  const element = useRoutes(openRoute);
+
+  return <>{element}</>;
 }
 
 export default App;
-
-// App- Header- profile -logout
-// contextAPI,
-// redux, zustand
-
-globalstore;
