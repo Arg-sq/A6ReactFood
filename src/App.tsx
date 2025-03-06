@@ -1,13 +1,12 @@
 import LandinPage from "./pages/LandinPage";
-import Menu from "./pages/menu/Menu";
 
 import { useRoutes } from "react-router-dom";
+import Login from "./pages/Login/Login";
 
 function App() {
-  const openRoute = [
-    { path: "/", element: <LandinPage /> },
-    { path: "/login", element: <Menu /> },
-  ];
+  const openRoute = [{ path: "/login", element: <Login /> }];
+
+  const authRoute = [{ path: "/", element: <LandinPage /> }];
 
   const element = useRoutes(openRoute);
 
